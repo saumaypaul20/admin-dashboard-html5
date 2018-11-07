@@ -5,6 +5,7 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
+    
 }
  body{
   background-color: #ddd  
@@ -166,9 +167,9 @@
     left: 0;
     top: 0;
     z-index:1 ;
-    height: 100vh;
+    height: 100%;
     width: 220px;
-    overflow: hidden;
+    overflow-y: scroll;
     background: #fff;
     box-shadow: 3px 0 5px rgba(0, 0, 0, 0.05);
     -webkit-transition: all 0.3s ease 0s;
@@ -219,7 +220,7 @@
     font-weight: 600;
     display: block;
     position: relative;
-    top: 9vh;
+    top: 50px;
     padding: 10px 0 10px 20px;
     
 }
@@ -241,8 +242,7 @@
     border-top: 1px solid rgb(219, 219, 219);
     padding: 20px;
     position: relative;
-    top: 10vh;
-    height: 60vh;
+    top: 50px;
     font-size: 13px;
     list-style: none;
     font-weight: 600;
@@ -264,6 +264,12 @@
     position: relative;
     top: 50px;
     padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.main{
+    overflow: auto;
+    
 }
 .info{
     z-index:0;
@@ -430,7 +436,7 @@ canvas{
     z-index:1 ;
     height: 100vh;
     width: 220px;
-    overflow: hidden;
+    overflow: auto;
     background: rgb(206, 206, 206);
     box-shadow: 3px 0 5px rgba(0, 0, 0, 0.05);
     -webkit-transition: all 0.3s ease 0s;
@@ -535,11 +541,13 @@ canvas{
 }
 
 .stat_chart{
+    
     position: relative;
     top:3vh;
     clear: both;
     margin: 0 auto;
     height:40vh; width:80vw;
+    padding: 10px;
 }
 
 #notifs{
