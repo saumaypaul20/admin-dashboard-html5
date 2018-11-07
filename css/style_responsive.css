@@ -20,7 +20,12 @@
     #myChart, #myLineChart, #myBarChart{
         max-height: 40px;
     } 
-   
+    .menu{
+        display: none;
+    }
+   .right_sidebar{
+       display: none;
+   }
 }
 
 @media screen and (max-width: 1200px) {
@@ -29,7 +34,7 @@
         padding: 0 5px;
     }
     .info{
-        margin-top:0;
+        margin-top: 15px;   
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 15px;
         width: 100%;

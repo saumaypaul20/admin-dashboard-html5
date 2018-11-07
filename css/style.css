@@ -8,7 +8,9 @@
     
 }
  body{
-  background-color: #ddd  
+  background-color: #ddd  ;
+
+  ;
 }
 
 .topnav {
@@ -132,13 +134,13 @@
 /* Search division styles */
 
 #search_responsive{
+    z-index: 9999;
     display: none;
-    animation-duration: 0.5s;
     position: relative;
-    top: 40px;
+    top: 50px;
     margin: auto;
-    width: 50%;
-    
+    width: 70%;
+    transition: all 0.5s linear;
     
     
 }
@@ -169,7 +171,7 @@
     z-index:1 ;
     height: 100%;
     width: 220px;
-    overflow-y: scroll;
+    overflow: auto;
     background: #fff;
     box-shadow: 3px 0 5px rgba(0, 0, 0, 0.05);
     -webkit-transition: all 0.3s ease 0s;
@@ -264,7 +266,7 @@
     position: relative;
     top: 50px;
     padding-bottom: 50px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .main{
