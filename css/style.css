@@ -263,6 +263,7 @@
 .container{
     position: relative;
     top: 50px;
+    padding-bottom: 50px;
 }
 .info{
     z-index:0;
