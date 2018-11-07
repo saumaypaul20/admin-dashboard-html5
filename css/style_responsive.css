@@ -1,0 +1,76 @@
+
+@media screen and (max-width: 768px) {
+    
+    .infos > #myChart{
+        max-height: 10px;
+    }
+    .search-container input[type=search]{
+        width: 300px;  
+        
+    }
+    
+    .search-container {
+        clear: both;
+        display: none; 
+    }
+
+    .top-right> .small{
+        visibility: visible  ;
+    }
+    #myChart, #myLineChart, #myBarChart{
+        max-height: 40px;
+    } 
+   
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container{
+        padding: 0 5px;
+    }
+    .info{
+        margin-top:0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 15px;
+        width: 100%;
+    }
+    
+    .invoice_details{
+        grid-row-gap: 15px;
+        overflow-x: scroll;
+        width: 100%;
+    }
+    
+    .invoice_table{
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    .topnav .search-container button {
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+
+    .search-container input[type=search]{
+        width: 400px;    
+    }
+
+    .container{
+        position: relative;
+        top: 8vh;
+    }
+
+    .menu, #search_responsive, .right_sidebar{
+        display: none;
+    }
+
+    #myChart, #myLineChart, #myBarChart{
+        max-height: 40px;
+    } 
+}
+
+@media screen and (min-width: 1201px) {
+    #search_responsive{
+        display: none;
+    }
+}

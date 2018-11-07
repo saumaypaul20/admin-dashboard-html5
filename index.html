@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNIKWAN | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+        </a>
+        <a class="logo" href="#home">unikwan</a>
+        <div class="search-container">
+            <form action="#">
+                <span><i class="fas fa-search"></i></span>
+              <input type="search" placeholder="Search" name="search">
+            </form>
+        </div>
+        <div class="top-right">
+            
+            <a class="small" href="#"style="font-size: 15px; width: 10px;" onclick="myThirdFunction()"><i class="fas fa-search "></i></a> 
+            
+            <a href="#"style="font-size: 15px;" onclick="myFourthFunction()"><span class="notif_num">3</span> <i class="far fa-bell"></i> </a>
+          
+
+            <a href="#"style="font-size: 15px;" onclick="mySecondFunction()"><i class="fas fa-ellipsis-v"></i></a>
+            
+          
+            
+        </div>
+        
+      </div>
+      <!-- Notification Div -->
+      <div id="notifs" class="animated delay-0.5s fadeInUp">
+          <ul>
+              <li class="notif_list">New Notification 1</li>
+              <li class="notif_list">New Notification 2</li>
+              <li class="notif_list">New Notification 3</li>
+              <li id="more_notifs">View All Notifications </li>
+            
+          </ul>
+      </div>
+    <!-- Search div -->
+      <div id="search_responsive" class=" animated" >
+            <form action="#"> 
+                  <input type="search" placeholder="Search" name="search">
+                </form>
+      </div>
+
+    <!-- menu -->
+    
+    
+        
+<section class="container">
+
+        <div id="menu" class="menu animated delay-0.1s slideInLeft">
+
+                <!-- user infos -->
+                <ul class="profile">
+                    <li class="sub_profile"><img src="https://randomuser.me/api/portraits/men/79.jpg" alt="" width= "50px" height="50px" style="border-radius: 50%;"></li>
+                    <li class="sub_profile username ">Suhas U</li>
+                    <li class="sub_profile usermail">suhas@unikwan.com <i class="fas fa-sort-down"></i></li>
+                </ul>
+        
+                <!-- menu items here -->
+                <ul class="menu_items">
+                    <li class="active"><i class="fas fa-palette"></i>Dashboard</li>
+                    <li><i class="fas fa-project-diagram"></i>Projects<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="fas fa-code"></i>Platform<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="far fa-star"></i>Sales<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="fas fa-desktop"></i>Reports<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="fas fa-pen"></i>Statements<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="fas fa-chart-line"></i>Analytics<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="fas fa-chart-pie"></i>Expenses<i class="fas fa-chevron-right"></i></li>
+                    <li><i class="far fa-smile"></i>Users<i class="fas fa-chevron-right"></i></li>
+                </ul>
+        
+                <ul class="footer">
+                    
+                    <li>Unikwan &copy;</li>
+                    <li><a href="#">Privacy</a> & <a href="#">Terms</a></li>
+                </ul>
+        </div>
+
+
+        <div class="info">
+                <div class="infos">
+                        <!-- sales-->
+                        <ul>
+                            <li>Sales  <span class="title_flex">gross</span></li>
+                            <li class="sales_money">$ 43,190 <span>This week</span></li>
+                            
+                        </ul>
+                        <canvas id="myBarChart" width="100%" height="20px"></canvas>
+                    </div>
+                    <div class="infos">
+                            <!-- sales-->
+                            <ul>
+                                <li class="page_views">Page views  <i class="fas fa-ellipsis-v"></i></li>
+                                <li class="sales_money">83,710 <span>This month</span></li>
+                                
+                            </ul>
+                            <canvas id="myLineChart" width="100%" height="20px"></canvas>
+                        </div>
+                        <div class="infos">
+                                <!-- sales-->
+                                <ul>
+                                    <li>Reports</li>
+                                    <li class="sales_money">22,000 <span>Last week</span> <span class="sales_money_rate">8% <i class="fas fa-chart-line"></i></span></li>
+                                
+                                </ul>
+                                <canvas id="myChart"   style="width: 100%; max-height:10px;"></canvas>
+                            </div>
+        </div>
+
+        <div class="invoice_details">
+            <!-- invoice Tables  -->
+            <div class="invoices">
+                <span class="title_invoice">Invoices</span>
+                <span class="search_invoice" ><form action="#"><input type="search" placeholder="Search"></form></span>
+            </div>
+
+            <table class="invoice_table">
+                    <tbody>
+                        <tr class='th'>
+                            <th> ID</th>
+                            <th> Payment Type</th>
+                            <th> Company </th>
+                            <th> Date</th>
+                            <th> Progress</th>
+                            <th> Total</th>
+                        </tr>
+                        <!-- datas here -->
+                        <tr>
+                            <td>#203 </td>
+                            <td>American Express </td>
+                            <td>Integer Mattis Ltd</td>
+                            <td>Dec 16, 18:12 </td>
+                            <td><i class="fas fa-spinner"></i> </td>
+                            <td>$5430 </td>
+                        </tr>
+                        <tr>
+                            <td>#204 </td>
+                            <td>Discover </td>
+                            <td>BillFord XYZ Corp</td>
+                            <td>Dec 6, 18:12 </td>
+                            <td><i class="fas fa-spinner"></i> </td>
+                            <td>$5430 </td>
+                        </tr>
+                        <tr>
+                            <td>#205 </td>
+                            <td>MasterCard </td>
+                            <td>Fiskers Corp</td>
+                            <td>Nov 12, 18:12 </td>
+                            <td><i class="fas fa-spinner"></i> </td>
+                            <td>$5430 </td>
+                        </tr>
+                        <tr>
+                            <td>#206 </td>
+                            <td>Amex </td>
+                            <td>Coinder Seal Corp</td>
+                            <td>Nov 3, 18:12 </td>
+                            <td><i class="fas fa-spinner"></i> </td>
+                            <td>$5430 </td>
+                        </tr>
+                        <tr>
+                            <td>#207 </td>
+                            <td>PayPal </td>
+                            <td>Paul Marsons</td>
+                            <td>Oct 16, 18:12 </td>
+                            <td><i class="fas fa-spinner"></i> </td>
+                            <td>$5430 </td>
+                        </tr>
+                        <tr>
+                            <td>#208 </td>
+                            <td>PayPal </td>
+                            <td> Billy Wilson Corp</td>
+                            <td>Sept 11, 18:12 </td>
+                            <td><i class="fas fa-spinner"></i></td>
+                            <td>$5430 </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        </div>
+            
+       
+    
+        <div class="right_sidebar animated delay-0.1s slideInRight" id="right_sidebar">
+            
+            <ul class="messages">
+                    <span class="msg_title">new messages </span>
+                    <li class="messages_list">
+                        <span class="messages_img"><img src="https://randomuser.me/api/portraits/men/44.jpg" alt="" width="40px" height="40px" style="border-radius: 50%"></span>
+                        <span class="messages_user">Ned Stark</span>
+                        <span class="messages_time">3 hours ago</span>
+                    </li>
+                    <li class="messages_list">
+                            <span class="messages_img"><img src="https://randomuser.me/api/portraits/men/72.jpg" alt="" width="40px" height="40px" style="border-radius: 50%"></span>
+                            <span class="messages_user">Bruce Wayne</span>
+                            <span class="messages_time">1 hour ago</span>
+                    </li>
+                    <li class="messages_list">
+                            <span class="messages_img"><img src="https://randomuser.me/api/portraits/men/3.jpg" alt="" width="40px" height="40px" style="border-radius: 50%"></span>
+                            <span class="messages_user">Tony Stark</span>
+                            <span class="messages_time">6 hours ago</span>
+                    </li>    
+            </ul>
+        
+            <ul class="events">
+                    <span class="event_title">events </span>
+
+                    <li class="events_list">Team Scrum <span class="event_nums">12</span></li>
+                    <li class="events_list">Google I/O</li>
+                    <li class="more_event">No more events scheduled</li>
+                                
+                        
+            </ul>
+
+            <ul class="events" >
+            
+                <span class="event_title">stats <i class="far fa-chart-bar"></i></span>
+                <canvas class= "stat_chart" id="stat" width="100vh" height="50vh"></canvas>          
+            </ul>
+            
+                
+        </div>
+</section>
+</body>
+
+<script>
+
+//     function myFunction() {
+//         var x = document.getElementById("menu");
+//     if (x.style.display === "none") {
+        
+//         x.classList.remove("slideOutLeft");
+//         x.classList.add("slideInLeft");
+//         x.style.display = "block";
+        
+//     } else {
+        
+//         x.classList.remove("slideInLeft");
+//         x.classList.add("slideOutLeft");
+//         x.style.display = "none";
+        
+//     }
+//     }
+
+
+
+//  // GRAPHS HERE
+
+//     //BAR GRAPH
+
+
+//     var ctx = document.getElementById("myBarChart").getContext('2d');
+//     Chart.defaults.global.tooltips = false; 
+//     Chart.defaults.global.legend.display = false;
+//     Chart.scaleService.updateScaleDefaults('linear', {
+//     ticks: {
+//         min: 0
+//     }
+// });
+   
+// var myBarChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+//         datasets: [{
+//             label: '',
+//             data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+//             borderWidth: 0
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 gridLines: {
+//                     drawOnChartArea: false
+//             },
+//             display: false
+//             }],
+//             xAxes: [{
+//                 gridLines: {
+//                     drawOnChartArea: false
+//             },
+//             display: false
+//             }]
+//         }
+//     }
+// });
+
+// //LINE GRAPH
+
+// var ctx1= document.getElementById('myLineChart').getContext('2d');
+
+
+// 		var config = {
+// 			type: 'line',
+// 			data: {
+// 				labels: ["", "", "", "", "", "", "", "", "", "", "", "", ],
+// 				datasets: [{
+//                     borderColor:'#ff8863',
+// 					backgroundColor:['#ffddaa'],
+//                     label: '',
+// 					data: [12, 19, 3, 5, 2, 3, 12, 12, 19, 3, 5, 2],
+// 					fill: true,
+// 				}]
+// 			},
+// 			options: {
+// 				responsive: true,
+				
+// 				scales: {
+// 					xAxes: [{
+// 						display: true,
+// 						scaleLabel: {
+// 							display: false
+							
+//                         },
+                        
+//             display: false
+// 					}],
+// 					yAxes: [{
+// 						display: true,
+// 						scaleLabel: {
+// 							display: false,
+							
+// 						},
+//             display: false
+//                     }]
+            
+// 				}
+// 			}
+// 		};
+//         var myLineChart = new Chart(ctx1, config);  
+	
+			
+
+// var ctx3= document.getElementById('myChart').getContext('2d');
+// var myChart = new Chart(ctx3, {
+//     type: 'horizontalBar',
+//     data: {
+// 				labels: [""],
+// 				datasets: [{
+                    
+// 					backgroundColor:'#00049e',
+//                     label: '',
+// 					data: [50],
+// 					fill: true,
+//                 },{
+            
+//                     backgroundColor:'#22569e',
+//                     label: '',
+// 					data: [100],
+// 					fill: true,
+// 				}]
+// 			},
+//     options: {
+// 				responsive: true,
+				
+// 				scales: {
+// 					xAxes: [{
+//                         stacked: true,
+// 						display: true,
+// 						scaleLabel: {
+// 							display: false
+							
+//                         },
+                        
+//             display: false
+// 					}],
+// 					yAxes: [{
+//                         display: true,
+//                         stacked: true,
+// 						scaleLabel: {
+// 							display: false,
+							
+// 						},
+//             display: false
+//                     }]
+            
+// 				}
+// 			}
+// });
+
+</script>
+<script src="./js/control.js"></script>
+
+</html>
