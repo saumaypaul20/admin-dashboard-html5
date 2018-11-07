@@ -37,7 +37,7 @@
     
     .invoice_details{
         grid-row-gap: 15px;
-        overflow-x: scroll;
+       
         width: 100%;
     }
     
@@ -57,7 +57,7 @@
 
     .container{
         position: relative;
-        top: 8vh;
+        top: 0;
     }
 
     .menu, #search_responsive, .right_sidebar{

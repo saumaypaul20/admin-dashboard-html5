@@ -264,12 +264,11 @@
     position: relative;
     top: 50px;
     padding-bottom: 50px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .main{
-    overflow: auto;
-    
+    padding: 10px 0px;
 }
 .info{
     z-index:0;
