@@ -135,7 +135,7 @@
     display: none;
     animation-duration: 0.5s;
     position: relative;
-    top: 9vh;
+    top: 40px;
     margin: auto;
     width: 50%;
     
@@ -433,7 +433,7 @@ canvas{
     right: 0;
     top: 0;
     z-index:1 ;
-    height: 100vh;
+    height: 100%;
     width: 220px;
     overflow: auto;
     background: rgb(206, 206, 206);
@@ -444,7 +444,7 @@ canvas{
 
 .messages{
     position: relative;
-    top: 8vh;
+    top: 50px;
     padding-top: 15px;
     display: block;
     height: 150px;
@@ -481,7 +481,7 @@ canvas{
     clear: both;
     display: block;
     position: relative;
-    top:10vh;
+    top:50px;
     padding-top: 10px;
     
 }
@@ -542,7 +542,7 @@ canvas{
 .stat_chart{
     
     position: relative;
-    top:3vh;
+    top:10px;
     clear: both;
     margin: 0 auto;
     height:40vh; width:80vw;
